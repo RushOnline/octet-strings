@@ -22,6 +22,7 @@ octet_string xrandom_key() {
     octet_string result;
     result.resize(sizeof(DES_cblock));
     DES_random_key(cast_ptr<DES_cblock>(result));
+    return result;
 }
 
 int main(int argc, char* argv[]) {
